@@ -1,0 +1,161 @@
+body {
+	/*font-family: 'Microsoft Jhenghei', Helvetica, Arial, sans-serif;*/
+	font-family: Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif !important;
+
+}
+.font-light {
+	font-family: Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif !important;	
+	font-weight: 300 !important;
+}
+.font-regular {
+	font-family: Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif !important;
+	font-weight: normal;
+}
+.font-black {
+	font-family: Helvetica, Arial, "Microsoft Yahei","微软雅黑", STXihei, "华文细黑", sans-serif !important;
+	font-weight: bold !important;
+}
+
+
+// ### Font regular ###
+.thumbs-heading {
+	.font-regular;
+}
+#home-projects {
+	.content {
+		.projects-thumb-menu {
+			.thumb.it {
+				.info {
+					.location {
+						.font-regular;
+					}
+				}
+			}
+		}
+	}
+}
+
+.press-lp {
+	.art-list {
+		a {
+			&.title {
+				.font-regular;
+			}
+		}
+	}
+}
+.art-holder, .view-mappoint {
+	.back-to-list {
+		a {
+			.font-regular;
+		}
+	}
+}
+#work-dir {
+	.project-item {
+		.info {
+			.inner {
+				.location {
+					.font-regular;
+				}
+			}
+		}
+	}
+}
+.project-title {
+	.font-regular;
+}
+#project-info  {
+	.row.info {
+		.attr {
+			span {
+				.font-regular;
+			}
+		}
+	}
+}
+
+
+// ## Font Back ###
+h1, h2, h3, b, strong, .btn10 {
+	.font-black;
+}
+.view_full, .view-full {
+	a, div.info {
+		.font-black;
+	}
+}
+#home-projects {
+	.content {
+		.title-bar {
+			.title {
+				.font-black;
+			}
+		}
+		.projects-thumb-menu {
+			.thumb.it {
+				.info {
+					.font-black;
+				}
+			}
+		}
+	}
+}
+.art-list {
+	.date {
+		.font-black;
+	}
+}
+#work-dir {
+	.project-item {
+		.info {
+			.inner {
+				.font-black;
+			}
+		}
+	}
+}
+.language-menu { 
+	a {
+		.font-black;	
+	}
+}
+#contact { 
+	.mappoint {
+		.font-black;
+	}
+}
+
+.form-full {
+	.form-note, .form-error {
+		.font-black;
+	}
+}
+.competition-menu {
+	a {
+		.font-black;	
+	}
+}
+
+// ### Font Light ###
+h4, em, i {
+	.font-light;
+}
+.art-list {
+	.date {
+		span {
+			.font-light;
+		}
+	}
+}
+#box_footer {
+	span {
+		.font-light;
+	}
+}
+	
+.project-case-study {
+  h1.title-attr, .section-title {
+    font-weight: 400 !important;
+  }
+}
