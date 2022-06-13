@@ -42,7 +42,7 @@ $(document).ready(function() {
 					);
 	}
 	// update menu on start!
-	//updateMenu("false");
+	// updateMenu("false");
 
 // jeżeli używamy AJAX'a to... 
 	// $(".art-holder .article-menu .art-list a").live("click", function () {
