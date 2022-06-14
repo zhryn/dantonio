@@ -1,0 +1,5 @@
+mixin navbar-menus(menus={})
+    ul#nav
+        each menu in menus
+            li(class=menu.active ? 'active' : '')
+                a(href=menu.href)= menu.text 

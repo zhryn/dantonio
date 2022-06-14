@@ -1,0 +1,20 @@
+{
+  "name": "dantonio",
+  "version": "1.0.0",
+  "description": "d'Antonio Official Website",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "compile": "gulp compile",
+    "serve": "gulp serve"
+  },
+  "author": "Muhammad Zuhriyan Sauqi <hello@zuhriyansauqi.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.27.10",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-data": "^1.3.1",
+    "gulp-pug": "^5.0.0"
+  }
+}

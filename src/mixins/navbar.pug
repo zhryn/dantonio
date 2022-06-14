@@ -1,0 +1,11 @@
+mixin navbar(hasSubmenu=false)
+    #box_BOXES_HEADER.box 
+        .content 
+            #box_header.box 
+                .content
+                    header(class=hasSubmenu ? 'has-submenu' : 'no-submenu')
+                        .header-holder
+                            if block
+                                block
+                .end
+        .end
