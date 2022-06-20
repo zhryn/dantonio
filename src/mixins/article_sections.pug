@@ -1,0 +1,41 @@
+mixin article-sections(sections)
+    .case-study-sections
+        each section in sections 
+            .case-study-section.mb-40
+                if section.type == 'two-images'
+                    +two-images(section.image1, section.image2)
+                else if section.type == 'single-center-image'
+                    +single-center-image(section.image)
+                else if section.type == 'paragraph-center'
+                    +paragraph-center(section.text)
+                else if section.type == 'full-image'
+                    +full-image(section.image)
+        .pb-40
+
+mixin two-images(image1, image2)
+    .imgcolumns-full.full-bleed.c-8
+        .container-fluid.no-gutters
+            .row.justify-content-between.no-gutters
+                .col-sm-8.mb-4.mb-sm-0
+                    img(src=image1)
+                .col-sm-8
+                    img(src=image2)
+
+mixin single-center-image(image)
+    .image-column
+        .container-fluid
+            .row.justify-content-center
+                .col-md-8.col-sm-12
+                    img(src=image)
+
+mixin paragraph-center(text)
+    .projecttext-full.has-info
+        .container-fluid
+            .row.justify-content-center
+                .col-md-8.col-sm-12
+                    .info-attr
+                        div= text
+
+mixin full-image(image)
+    .image-full
+        img(src=image)

@@ -1,0 +1,14 @@
+mixin article-description(description, attrs)
+    .project-description-section.mb-40
+        .container-fluid 
+            .row.justify-content-end
+                .col-md-10.col-sm-12 
+                    .info-attr
+                        each paragraph in description
+                            p.Pa3(style="text-align: justify; line-height: normal;")!= paragraph
+                .col-sm-4
+                    .meta-attrs
+                        each attr in attrs 
+                            .attr
+                                .attr-name= `${attr.name}:`
+                                .attr-value= attr.value

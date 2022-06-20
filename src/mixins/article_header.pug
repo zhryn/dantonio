@@ -1,0 +1,9 @@
+mixin article-header(title, subtitle, header)
+    .container-fluid
+        .row.justify-content-center
+            .col-md-12
+                h1.title-attr= title
+                .location-attr= subtitle
+    .opening-image.mb-40 
+        .image-full 
+            img(src= header)

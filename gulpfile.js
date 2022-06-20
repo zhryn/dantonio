@@ -8,7 +8,10 @@ const { src, dest, task, series, parallel, watch } = require('gulp'),
 const COMPILE_FOLDER = './dist';
 const SRC_FOLDER = './src';
 const SOURCES_FOLDER = [
-    './src/*.pug'
+    './src/**/*.pug',
+    '!./src/layouts/**/*.pug',
+    '!./src/components/**/*.pug',
+    '!./src/mixins/**/*.pug'
 ]
 const ASSETS_FOLDER = {
     STYLES: 'assets/css',
