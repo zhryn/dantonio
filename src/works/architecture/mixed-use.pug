@@ -1,0 +1,20 @@
+extends /layouts/layout_works.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Work > Mixed Use")
+
+block body-menu
+    include /components/menu/work/architecture_mixed-use.pug
+
+block body-data 
+    -
+        const articleItems = [
+            {
+                type: 'large',
+                image: '/assets/img/works/abu-dhabi-residence/header.jpg',
+                name: 'Abu Dhabi Residence',
+                location: 'Abu Dhabi',
+                href: '/works/architecture/mixed-use/abu-dhabi-residence.html',
+            }
+        ]

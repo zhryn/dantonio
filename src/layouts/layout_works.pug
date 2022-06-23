@@ -1,0 +1,42 @@
+extends /layouts/layout_main.pug
+
+block head-style
+    link(href=css.elasticslider, rel='stylesheet' type='text/css')
+
+block head-script
+    script(src=js.imagesloaded, type='text/javascript')
+    script(src=js.work, type='text/javascript')
+    script(src=js.masonry, type='text/javascript')
+
+block body
+    block body-menu
+
+    block body-data
+
+    body.type-dir
+        include /mixins/navbar.pug
+        +navbar(true)
+            include /mixins/navbar_container.pug
+            +navbar-container
+                include /mixins/navbar_menus.pug
+                +navbar-menus(menu, submenu)
+
+        #main.alpha0
+            #work-dir.dir_view_full.view_full
+                each item in articleItems 
+                    include /mixins/article_item.pug
+                    +article-item(item.type, item.image, item.name, item.location, item.href)
+
+            .popup.overlay.hidden
+            include /components/preloader.pug
+
+        include /components/footer.pug
+
+        script(src=js.elasticslider, type='text/javascript')
+        script(src=js.easing, type='text/javascript')
+        script(src=js.tweenlite, type='text/javascript')
+        script(src=js.easepack, type='text/javascript')
+        script(src=js.cssplugin, type='text/javascript')
+        script(src=js.main, type='text/javascript')
+        script(src=js.imgpreload, type='text/javascript')
+        script(src=js.bundle, type='text/javascript')

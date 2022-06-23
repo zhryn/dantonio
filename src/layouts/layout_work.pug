@@ -1,0 +1,42 @@
+extends /layouts/layout_main.pug
+
+block head-style
+    link(href=css.elasticslider, rel='stylesheet' type='text/css')
+
+block body
+    block body-menu
+
+    block body-data
+
+    body.type-design_project
+        include /mixins/navbar.pug
+        +navbar(true)
+            include /mixins/navbar_container.pug
+            +navbar-container
+                include /mixins/navbar_menus.pug
+                +navbar-menus(menu, submenu)
+
+        #main.alpha0
+            .project-case-study.pt-20
+                include /mixins/article_header.pug
+                +article-header(article.title, article.subtitle, article.header)
+
+                include /mixins/article_description.pug
+                +article-description(article.description, article.attrs)
+
+                include /mixins/article_sections.pug
+                +article-sections(article.sections)
+
+            .popup.overlay.hidden
+            include /components/preloader.pug
+
+        include /components/footer.pug
+
+        script(src=js.elasticslider, type='text/javascript')
+        script(src=js.easing, type='text/javascript')
+        script(src=js.tweenlite, type='text/javascript')
+        script(src=js.easepack, type='text/javascript')
+        script(src=js.cssplugin, type='text/javascript')
+        script(src=js.main, type='text/javascript')
+        script(src=js.imgpreload, type='text/javascript')
+        script(src=js.bundle, type='text/javascript')

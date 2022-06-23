@@ -1,3 +1,19 @@
+var lameBrowser = function () {
+    if ($.browser.msie) {
+        if (parseInt($.browser.version, 0) < 9) {
+            return true;
+        }
+    }
+    return false;
+};
+
+var IEBrowser = function () {
+    if ($.browser.msie) {
+        return true;
+    }
+    return false;
+}
+
 var preloaderInterval;
 var preloaderPos = 0;
 

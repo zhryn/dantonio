@@ -5,15 +5,18 @@
         "cssplugin": "/assets/js/CSSPlugin.js",
         "tweenlite": "/assets/js/TweenLite.js",
         "easepack": "/assets/js/EasePack.js",
+        "imagesloaded": "/assets/js/imagesloaded.min.js",
         
         "jquery": "/assets/js/jquery-1.7.min.js",
         "elasticfader": "/assets/js/jquery.elasticfader.0.1.js",
         "elasticslider": "/assets/js/jquery.elasticslider.0.1.js",
         "imgpreload": "/assets/js/jquery.imgpreload.js",
         "easing": "/assets/js/jquery.easing.1.3.js",
+        "masonry": "/assets/js/jquery.masonry.min.js",
 
         "home": "/assets/js/design.home.js",
-        "main": "/assets/js/design.main.js"
+        "main": "/assets/js/design.main.js",
+        "work": "/assets/js/design.work.js"
     },
     "css": {
         "style": "/assets/css/style.css",

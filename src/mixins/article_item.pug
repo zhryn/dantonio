@@ -1,0 +1,23 @@
+mixin article-item(type, image, name, location, href)
+    .project-list.project-item.alpha0(class= type)
+        -
+            const ceils = (index) => `ceil${index}`
+            let numberOfCeils = 0
+
+            if (type === 'large') numberOfCeils = 4
+            else if (type === 'vertical') numberOfCeils = 2
+            else numberOfCeils = 1
+
+        .ceils 
+            - let n = 0
+            while n < numberOfCeils
+                .ceil.fl(class= `ceil${n++}`)
+
+        .cf 
+        .project-item-img
+            img(src= image, border= 0, class= type!=='none' ? type : '')
+        .info.alpha0(data-url= href)
+            .inner 
+                a(href= href)= name
+                .location 
+                    a(href= href)= location
