@@ -26,6 +26,7 @@ block body
                 each item in articleItems 
                     include /mixins/article_item.pug
                     +article-item(item.type, item.image, item.name, item.location, item.href)
+                .cf
 
             .popup.overlay.hidden
             include /components/preloader.pug

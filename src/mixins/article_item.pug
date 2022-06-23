@@ -5,13 +5,13 @@ mixin article-item(type, image, name, location, href)
             let numberOfCeils = 0
 
             if (type === 'large') numberOfCeils = 4
-            else if (type === 'vertical') numberOfCeils = 2
+            else if (type === 'vertical' || type === 'horizontal') numberOfCeils = 2
             else numberOfCeils = 1
 
         .ceils 
             - let n = 0
             while n < numberOfCeils
-                .ceil.fl(class= `ceil${n++}`)
+                .ceil(class= `ceil${n++} fl`)
 
         .cf 
         .project-item-img

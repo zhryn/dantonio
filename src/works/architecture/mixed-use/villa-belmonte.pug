@@ -1,0 +1,49 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Villa Belmonte")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Villa Belmonte',
+            subtitle: 'Belmonte',
+            slug: 'villa-belmonte',
+            header: '/assets/img/works/villa-belmonte/header.jpg',
+            description: [
+                'As modern architects we create an efficient and effective master plan design for the city that places all amenities within convenient reach of transport links. By developing a flow of people and traffic, we refine the city experience for all.',
+            ],
+            attrs: [
+                { name: "Location", value: "Belmonte" },
+                { name: "Type", value: "Mixed Use Building (Villa, House, Commercial)" },
+                { name: "Site Area", value: "± 20,000 m²" },
+                { name: "GFA", value: "± 134,000 m²" },
+                { name: "Height", value: "2-3rd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" }
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/villa-belmonte/content_1_1.jpg',
+                    image2: '/assets/img/works/villa-belmonte/content_1_2.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'Villa Belmonte has a complex function there is private area it located for private house functional building and there is a public area for guest or other visitor who want stay short and who want to do the activity in commercial area.'
+                },
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/villa-belmonte/content_2_1.jpg',
+                    image2: '/assets/img/works/villa-belmonte/content_2_2.jpg'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/villa-belmonte/content_3.jpg'
+                }
+            ]
+        }

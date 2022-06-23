@@ -1,0 +1,30 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Miami Condonium")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Miami Condonium',
+            subtitle: 'Miami',
+            slug: 'miami-condonium',
+            header: '/assets/img/works/miami-condonium/header.jpg',
+            description: [
+                'Miami condonium with its familiar Miami architecture style, abudance of light and innovative robotic parking system, this condonium offers the very best of Miami living. Convience and luxury sit side by side to create a superb living experience, crafted by the best architects in Miami.',
+            ],
+            attrs: [
+                { name: "Location", value: "Miami" },
+                { name: "Type", value: "Mixed Use Building (Shopping Mall, Condotel, Parking Building)" },
+                { name: "Site Area", value: "± 7,420 m²" },
+                { name: "GFA", value: "± 67,000 m²" },
+                { name: "Height", value: "30th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" }
+            ],
+            sections: []
+        }

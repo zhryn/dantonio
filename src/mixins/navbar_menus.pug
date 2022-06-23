@@ -1,31 +1,61 @@
-mixin navbar-menus(menus={}, submenus={})
+mixin navbar-menus(menus=[], submenus=[])
     .header-col2.header-col.fl(class=submenus.length == 0 ? 'home' : '')
         ul#nav
             each menu in menus
                 li(class=menu.active ? 'active' : '')
                     a(href=menu.href)= menu.text 
 
-    if submenu && submenu.length > 0
-        ul#nav-sub.sub-10.visible-lg
-            each submenu in submenus 
-                li.col-sub.item-1.header-col.fl.item-type-dir(class=submenu.active ? 'active' : '')
-                    a(href=submenu.href)= submenu.text 
-                    -
-                        const spliceIntoChunks = (arr, chunkSize) => {
-                            const res = [];
-                            while (arr.length > 0) {
-                                const chunk = arr.splice(0, chunkSize);
-                                res.push(chunk);
-                            }
-                            return res;
-                        }
+    if submenus && submenus.length > 0
+        +navbar-submenus-mobile(submenus)
+        +navbar-submenus(submenus)
 
+mixin navbar-submenus(submenus=[])
+    ul#nav-sub.sub-10.visible-lg
+        each submenu in submenus 
+            li.col-sub.item-1.header-col.fl.item-type-dir(class=submenu.active ? 'active' : '')
+                a(href=submenu.href)= submenu.text 
+                -
+                    const spliceIntoChunks = (arr, chunkSize) => {
+                        const res = [];
+                        while (arr.length > 0) {
+                            const chunk = arr.splice(0, chunkSize);
+                            res.push(chunk);
+                        }
+                        return res;
+                    }
+
+                if submenu.subs && submenu.subs.length > 0
+                    ul#nav-sub-sub
+                        each chunk in spliceIntoChunks(submenu.subs, 3)
+                            .col-sub-sub.fl
+                                each sub in chunk
+                                    li(class=sub.active ? 'active' : '')
+                                        a(href=sub.href)= sub.text
+                        .cf
+
+mixin navbar-submenus-mobile(submenus=[])
+    ul#nav-sub-m.sub-10.submenu-collapsed.hidden-lg 
+        li.active 
+            -
+                const index = submenus.findIndex(x => x.active)
+                const navText = submenus[index].text
+            a(href='', data-toggle='#sub-sub-collapse')= navText
+        li.hamburger-wrapper 
+            a(href='', data-toggle='#sub-sub-collapse')
+                span 
+                span
+                span
+
+    #sub-sub-collapse.hidden-lg 
+        ul 
+            li.close-wrapper.font-regular
+                a#close-sub-sub(href='')!='&times;'
+            each submenu in submenus
+                li.item-type-dir(class=submenu.active ? 'active' : '')
+                    a(href=submenu.href)= submenu.text
                     if submenu.subs && submenu.subs.length > 0
                         ul#nav-sub-sub
-                            each chunk in spliceIntoChunks(submenu.subs, 3)
-                                .col-sub-sub.fl
-                                    each sub in chunk
-                                        li(class=sub.active ? 'active' : '')
-                                            a(href=sub.href)= sub.text
+                            each sub in submenu.subs
+                                li(class=sub.active ? 'active' : '')
+                                    a(href=sub.href)= sub.text
                             .cf
-                        
