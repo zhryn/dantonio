@@ -1,0 +1,57 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Aquarius Tower Atlanta")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Aquarius Tower Atlanta',
+            subtitle: 'Atlanta',
+            slug: 'aquarius-tower-atlanta',
+            header: '/assets/img/works/aquarius-tower-atlanta/header.jpg',
+            description: [
+                'Aquarius Tower Atlanta is one of our Mixed use building. This mixed use building consists of several functions of an Office, Hotel, Condotel, Shopping Centre, Parking Building with a 45th floor. It\'s amasterpiece of contemporary architecture style that blends practical yet beautiful interiors with the latest in technology. Its robot parking system is one of the first of its kind, and it is the finishingtouch for this fine example of contemporary architecture in Atlanta.',
+            ],
+            attrs: [
+                { name: "Location", value: "Atlanta" },
+                { name: "Type", value: "Mixed Use Building (Office, Hotel, Condotel, Shopping Centre, Parking Building)" },
+                { name: "Site Area", value: "± 12,000 m²" },
+                { name: "GFA", value: "± 278,000 m²" },
+                { name: "Height", value: "45th Floor" },
+                { name: "Service", value: "Architecture " },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/aquarius-tower-atlanta/content_1_1.jpg',
+                    image2: '/assets/img/works/aquarius-tower-atlanta/content_1_2.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'The zoning of the shopping center and office tower is quite strategic and mutually sustainable between these two different building functions. These buildings are very attractive, manydifferent markets, but with the architectural concepts and technologies applied, the buildings are the main attraction in this area.'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/aquarius-tower-atlanta/content_2.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'The point of view from this area Aquarius tower is the plaza. The plaza have potential to collecting all the users of building to gathering, entertaining, and other activity both indoor and outdoor plaza with all people.'
+                },
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/aquarius-tower-atlanta/content_3_1.jpg',
+                    image2: '/assets/img/works/aquarius-tower-atlanta/content_3_2.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'DAAD develop a new borough that builds upon the emerging creative industry by providing brand-new homes and public areas for the community. It will generate new job opportunities for the area and create a lively neighborhood that supports the city\'s culture of technology , as well as its large network of parks.'
+                },
+            ]
+        }

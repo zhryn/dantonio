@@ -223,8 +223,7 @@ $(document).ready(function () {
 
         $(".project-item").each(function () {
             $(this).height("auto");
-            if (IEBrowser())
-                $(this).height($(this).height() - 3);
+            $(this).height($(this).height() - 3);
         });
         $(".project-item-img").each(function () {
             $(this).height("auto");

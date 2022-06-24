@@ -1,0 +1,48 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Dolce")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Dolce',
+            subtitle: 'Miami',
+            slug: 'dolce',
+            header: '/assets/img/works/dolce/header.jpg',
+            description: [
+                'Dolce is Contemporary architecture and innovative use of the surrounding habitat have provided a unique ocean front condominium design that has created a unique elevation for onlookers and residents. Modern, ocean front living at its very best.',
+            ],
+            attrs: [
+                { name: "Location", value: "Miami" },
+                { name: "Type", value: "Mixed Use Building" },
+                { name: "Site Area", value: "± 5,940 m²" },
+                { name: "GFA", value: "± 16,370 m²" },
+                { name: "Height", value: "15th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/dolce/content_1_1.jpeg',
+                    image2: '/assets/img/works/dolce/content_1_2.jpeg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'The lower levels of the building provide more leisure and wellness amenities for the community with an indoor pool, gym, children’s play areas and smaller meeting rooms. All spaces have direct connection to external terraces to provide views and access to the surrounding landscape. With current and future flexibility in mind, the building will be converted in the future into a retail center and community center for the residents.'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/dolce/content_2.jpeg'
+                },
+                {
+                    type: 'full-image',
+                    image: '/assets/img/works/dolce/content_3.jpg'
+                }
+            ]
+        }
