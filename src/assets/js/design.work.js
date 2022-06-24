@@ -124,7 +124,7 @@ $(document).ready(function () {
             return containerWidth / 4;
         },
         // isFitWidth : false,		 
-        isAnimated: false
+        isAnimated: false,
     });
 
     // imagesloaded
