@@ -59,8 +59,9 @@ const distWatch = () => watch(`${COMPILE_FOLDER}/**/*`, browserSync.reload);
 
 const startServer = () => browserSync.init({
     server: {
-        baseDir: `${COMPILE_FOLDER}`
-    }
+        baseDir: `${COMPILE_FOLDER}`,
+    },
+    browser: "firefox"
 });
 
 const watchTask = parallel(

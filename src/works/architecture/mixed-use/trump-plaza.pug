@@ -1,0 +1,31 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Trump Plaza")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Trump Plaza',
+            subtitle: 'Trump Plaza',
+            slug: 'trump-plaza',
+            header: '/assets/img/works/trump-plaza/header.jpg',
+            description: [
+                'With its contemporary architecture and unusual ground level parking area, this impressive building avoids typical ocean front condominium design to offer something unique that resets our expectations for Palm Beach architecture.',
+                'Users can do many activity in one area because there are many functional building in one area like office, hotel, then users can stay longer in Condominium building. This Project has a futuristic facility to treat the Users with infinite pool in roof top and others leisure. Ground level plazas and pedestrian streets activate both edges of the central retail pavilion and are lined with retail and restaurants.'
+            ],
+            attrs: [
+                { name: "Location", value: "West Palm Beach" },
+                { name: "Type", value: "Mixed Use Building (Hotel, Office, Condotel, Parking Building)" },
+                { name: "Site Area", value: "± 10,800 m²" },
+                { name: "GFA", value: "± 24,500 m²" },
+                { name: "Height", value: "32th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: []
+        }

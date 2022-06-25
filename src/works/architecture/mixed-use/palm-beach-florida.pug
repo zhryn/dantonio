@@ -1,0 +1,30 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Palm Beach, Florida")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Palm Beach, Florida',
+            subtitle: 'Palm Beach, Florida',
+            slug: 'palm-beach-florida',
+            header: '/assets/img/works/palm-beach-florida/header.jpg',
+            description: [
+                'Palm Beach, Floridais Contemporary architecture and innovative use of the surrounding habitat have provided a unique ocean front condominium design that has created a unique elevation for onlookers and residents. Modern, ocean front living at its very best.',
+            ],
+            attrs: [
+                { name: "Location", value: "Palm Beach, Florida" },
+                { name: "Type", value: "Mixed Use Building (Office, Commercial, Residence)" },
+                { name: "Site Area", value: "± 1,890 m²" },
+                { name: "GFA", value: "± 8,900 m²" },
+                { name: "Height", value: "3th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: []
+        }
