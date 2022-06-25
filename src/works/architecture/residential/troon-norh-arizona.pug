@@ -1,0 +1,51 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Troon Norh Arizona")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Troon Norh Arizona',
+            subtitle: 'Arizona',
+            slug: 'troon-norh-arizona',
+            header: '/assets/img/works/troon-norh-arizona/header.jpg',
+            description: [
+                'Troon Norh Arizona With an abundance of glass to create a bright, spacious interior this contemporary style house brings 21st century living to Arizona. Wide decks and large, open rooms create flexible, luxurious living spaces that make the most of the location.',
+            ],
+            attrs: [
+                { name: "Location", value: "Arizona" },
+                { name: "Type", value: "Housing - Residential" },
+                { name: "Site Area", value: "± 6,370 m²" },
+                { name: "GFA", value: "± 3,350 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture & Interior Design" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/troon-norh-arizona/content_1.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'Its’s located in Arizona and surrounded by an environment that is quitenatural and the atmosphere makes residents feel comfortable to live.'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/troon-norh-arizona/content_2.jpg'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/troon-norh-arizona/content_3.jpg'
+                },
+                {
+                    type: 'video',
+                    video: '/assets/img/works/troon-norh-arizona/content_4.mp4'
+                }
+            ]
+        }

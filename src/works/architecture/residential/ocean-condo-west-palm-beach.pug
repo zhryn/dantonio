@@ -1,0 +1,44 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Ocean Condo West Palm Beach")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Ocean Condo West Palm Beach',
+            subtitle: 'West Palm Beach',
+            slug: 'ocean-condo-west-palm-beach',
+            header: '/assets/img/works/ocean-condo-west-palm-beach/header.jpg',
+            description: [
+                'Taking ocean front condominium design in a new direction, this technology driven building from the best architects in Miami delivers sumptuous living, with large glass areas that bring miles of ocean into the living space, with robotic parking and other technology creating a fantastic living experience.',
+            ],
+            attrs: [
+                { name: "Location", value: "West Palm Beach" },
+                { name: "Type", value: "Residential (Condo Building)" },
+                { name: "Site Area", value: "± 6,000 m²" },
+                { name: "GFA", value: "± 78,500 m²" },
+                { name: "Height", value: "14th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/ocean-condo-west-palm-beach/content_1_1.jpg',
+                    image2: '/assets/img/works/ocean-condo-west-palm-beach/content_1_2.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'Located in front of beach in West Palm Beach this Building has 14th Floor, this view can increase the selling point of this building. Luxury and premium residentia are placed along at the beachfront and are designed to blur the boundaries between nature and architecture through infinity pools, gardens, outdoor decks and direct access to a private beach.'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/ocean-condo-west-palm-beach/content_2.jpg'
+                }
+            ]
+        }

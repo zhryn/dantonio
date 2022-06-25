@@ -1,0 +1,39 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Belvue Condo")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Belvue Condo',
+            subtitle: 'Bellevue, Washington DC',
+            slug: 'belvue-condo',
+            header: '/assets/img/works/belvue-condo/header.jpg',
+            description: [
+                'Bellevue Condo A beautiful building that brings contemporary architecture style to condo living. Built from an impressive masterplan design, the building flows into its natural surroundings, with wide balconies allowing residents to enjoy the fantastic setting throughout the day.',
+            ],
+            attrs: [
+                { name: "Location", value: "Bellevue, Washington DC" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 4,200 m²" },
+                { name: "GFA", value: "± 13,000 m²" },
+                { name: "Height", value: "3rd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Constuction" },
+            ],
+            sections: [
+                {
+                    type: 'full-image',
+                    image: '/assets/img/works/belvue-condo/content_1.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'One of the other key elements in this project, there is no room for excessive furniture or decors inmodern designs.Tied very closely to minimalism, modern design embraces the idea that less is more. Decorations such as vases, pottery, other Knick knacks, and even books are sparse, often stored out of sight.Everything is placed with a purpose, and special care is taken not to let space feel cluttered, keeping the light, airy feeling of the room alive.'
+                }
+            ]
+        }

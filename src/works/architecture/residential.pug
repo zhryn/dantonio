@@ -1,0 +1,41 @@
+extends /layouts/layout_works.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Work > Residential")
+
+block body-menu
+    include /components/menu/work/architecture_residential.pug
+
+block body-data 
+    -
+        const articleItems = [
+            {
+                type: 'default',
+                image: '/assets/img/works/colorado-estate-wose-ii/thumb.jpg',
+                name: 'Colorado Estate Wose II',
+                location: 'Colorado',
+                href: '/works/architecture/residential/colorado-estate-wose-ii.html',
+            },
+            {
+                type: 'default',
+                image: '/assets/img/works/ocean-condo-west-palm-beach/thumb.jpg',
+                name: 'Ocean Condo West Palm Beach',
+                location: 'Colorado',
+                href: '/works/architecture/residential/ocean-condo-west-palm-beach.html',
+            },
+            {
+                type: 'default',
+                image: '/assets/img/works/belvue-condo/thumb.jpg',
+                name: 'Belvue Condo',
+                location: 'Bellevue, Washington DC',
+                href: '/works/architecture/residential/belvue-condo.html',
+            },
+            {
+                type: 'default',
+                image: '/assets/img/works/troon-norh-arizona/thumb.jpg',
+                name: 'Troon Norh Arizona',
+                location: 'Arizona',
+                href: '/works/architecture/residential/troon-norh-arizona.html',
+            }
+        ]

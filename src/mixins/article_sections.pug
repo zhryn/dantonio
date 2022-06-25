@@ -10,6 +10,8 @@ mixin article-sections(sections)
                     +paragraph-center(section.text)
                 else if section.type == 'full-image'
                     +full-image(section.image)
+                else if section.type == 'video'
+                    +video(section.video)
         .pb-40
 
 mixin two-images(image1, image2)
@@ -39,3 +41,12 @@ mixin paragraph-center(text)
 mixin full-image(image)
     .image-full
         img(src=image)
+
+mixin video(video)
+    .image-column
+        .container-fluid
+            .row.justify-content-center
+                .col-md-8.col-sm-12
+                    .text-center
+                        video(controls= 'controls', style= { width: '100%' })
+                            source(src= video, type= 'video/mp4')
