@@ -1,0 +1,30 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Private Estate")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Private Estate',
+            subtitle: 'Florida',
+            slug: 'private-estate',
+            header: '/assets/img/works/private-estate/header.jpg',
+            description: [
+                'Private Estate Built from bespoke colonial style house plans, this impressive home has everything you expect from modern architects, with that traditional exterior architecture revealing a technology laden interior that delivers exceptional living at its very best.',
+            ],
+            attrs: [
+                { name: "Location", value: "Florida" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 1,300 m²" },
+                { name: "GFA", value: "± 2,320 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: []
+        }

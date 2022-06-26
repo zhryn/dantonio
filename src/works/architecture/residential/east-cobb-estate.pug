@@ -1,0 +1,35 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "East Cobb Estate")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'East Cobb Estate',
+            subtitle: 'East Cobb',
+            slug: 'east-cobb-estate',
+            header: '/assets/img/works/east-cobb-estate/header.jpg',
+            description: [
+                'East Cobb Using the best of modern colonial style house design ideas in conjunction with the latest technologies and luxury features, this new home offers stunning accommodation and a superb living experience.',
+            ],
+            attrs: [
+                { name: "Location", value: "East Cobb" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 3,260 m²" },
+                { name: "GFA", value: "± 5,830 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/grayshefield-st-petersburge-fl/content_1.jpg'
+                }
+            ]
+        }

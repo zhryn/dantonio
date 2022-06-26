@@ -1,0 +1,40 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Grand Bahama Palm Beach")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Grand Bahama Palm Beach',
+            subtitle: 'Miami',
+            slug: 'grand-bahama-palm-beach',
+            header: '/assets/img/works/grand-bahama-palm-beach/header.jpg',
+            description: [
+                'Grand Bahama Palm Beach With concept the best Palm Beach architecture modern interior design and beautiful, traditional New England farmhouse architecture to the exterior, you really can have the best of both worlds. Stunning classic looks with the finest in luxury living in onewonderful property.',
+            ],
+            attrs: [
+                { name: "Location", value: "Miami" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 2,530 m²" },
+                { name: "GFA", value: "± 4,200 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Constuction" },
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/grand-bahama-palm-beach/content_1_1.jpg',
+                    image2: '/assets/img/works/grand-bahama-palm-beach/content_1_2.jpg'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/grand-bahama-palm-beach/content_2.jpg'
+                }
+            ]
+        }
