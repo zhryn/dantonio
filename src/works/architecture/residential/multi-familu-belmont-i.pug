@@ -1,0 +1,30 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Multi Familu - Belmont I")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Multi Familu - Belmont I',
+            subtitle: 'Belmont',
+            slug: 'multi-familu-belmont-i',
+            header: '/assets/img/works/multi-familu-belmont-i/header.jpg',
+            description: [
+                'Contemporary architecture and minimalist style come together in this impressive and expansive condo interior remodel. Everything you expectfrom modern architects and then some, this superb project delivers achingly beautiful spaces built for relaxation and comfortable living.',
+            ],
+            attrs: [
+                { name: "Location", value: "Belmont" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 942 m²" },
+                { name: "GFA", value: "± 2,390 m²" },
+                { name: "Height", value: "4th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: []
+        }

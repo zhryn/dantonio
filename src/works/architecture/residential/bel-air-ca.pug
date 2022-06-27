@@ -1,0 +1,30 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Bel-Air CA")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Bel-Air CA',
+            subtitle: 'Kebbi',
+            slug: 'bel-air-ca',
+            header: '/assets/img/works/bel-air-ca/header.jpg',
+            description: [
+                'Bel-Air CA Rising between the palm trees we find this sumptuous Mediterranean villa that blends traditional exterior architecture with modern Mediterranean interior design. The result is one of the best Mediterranean style house projects you will find in the country.',
+            ],
+            attrs: [
+                { name: "Location", value: "Kebbi" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 853 m²" },
+                { name: "GFA", value: "± 1,200 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: []
+        }

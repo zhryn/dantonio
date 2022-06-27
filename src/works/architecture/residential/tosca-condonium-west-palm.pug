@@ -1,0 +1,30 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Tosca Condonium West Palm")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Tosca Condonium West Palm',
+            subtitle: 'Africa',
+            slug: 'tosca-condonium-west-palm',
+            header: '/assets/img/works/tosca-condonium-west-palm/header.jpg',
+            description: [
+                'Tosco Condominiums West Palm, Lagos, AfricaWith its striking ocean front condominium design, this spectacular building brings modern Mediterranean interior design to contemporary architecture to create something completely unique. A marvel of luxury living nestled in an unmatched natural setting.',
+            ],
+            attrs: [
+                { name: "Location", value: "Africa" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 3,620 m²" },
+                { name: "GFA", value: "± 20,940 m²" },
+                { name: "Height", value: "23rd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: []
+        }

@@ -1,0 +1,40 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Rod Stewart Palm Beach")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Rod Stewart Palm Beach',
+            subtitle: 'Palm Beach, Florida',
+            slug: 'rod-stewart-palm-beach',
+            header: '/assets/img/works/rod-stewart-palm-beach/header.jpg',
+            description: [
+                'Rod Stewart Palm Beach its Colonial style house plans from the best architects and building designers in Palm Beach, Florida, this impressive home offers spacious, flexible living that makes the most of the exterior setting to compliment the sumptuous interior design.',
+            ],
+            attrs: [
+                { name: "Location", value: "Palm Beach, Florida" },
+                { name: "Type", value: "Housing - Residential" },
+                { name: "Site Area", value: "± 2,680 m²" },
+                { name: "GFA", value: "± 3,650 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture & Interior Design" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/rod-stewart-palm-beach/content_1.jpg'
+                },
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/rod-stewart-palm-beach/content_2_1.jpg',
+                    image2: '/assets/img/works/rod-stewart-palm-beach/content_2_2.jpg'
+                },
+            ]
+        }
