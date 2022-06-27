@@ -5,7 +5,10 @@ block title
     +site-title(title, "Ocean Condo West Palm Beach")
 
 block body-menu
-    include /components/menu/work/architecture.pug
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, -1)
 
 block body-data
     -

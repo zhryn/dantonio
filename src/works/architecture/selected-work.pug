@@ -2,11 +2,14 @@ extends /layouts/layout_works.pug
 
 block title
     include /mixins/site_title.pug
-    +site-title(title, "Work > Selected Work")
+    +site-title(title, "Work > Architecture > Selected Work")
 
 block body-menu
-    include /components/menu/work/architecture_selected-work.pug
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, 0)
 
 block body-data 
-    include /components/data/article_architecture.pug
+    include /components/data/work/architecture/index.pug
     - const articleItems = [...architecture]

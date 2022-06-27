@@ -1,0 +1,12 @@
+include /components/data/work/architecture/mixed-use.pug
+include /components/data/work/architecture/residential.pug
+include /components/data/work/architecture/hospitality.pug
+include /components/data/work/architecture/commercial-cultural-civic.pug
+
+-
+    const architecture = [
+        ...mixedUse,
+        ...residential,
+        ...hospitality,
+        ...commercialCulturalCivic
+    ]
