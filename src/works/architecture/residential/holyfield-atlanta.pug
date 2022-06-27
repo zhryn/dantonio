@@ -1,0 +1,52 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Holyfield, Atlanta")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Holyfield, Atlanta',
+            subtitle: 'Florida',
+            slug: 'holyfield-atlanta',
+            header: '/assets/img/works/holyfield-atlanta/header.jpg',
+            description: [
+                'Holyfield is residential that located in Florida A contemporary style house using all concrete construction with innovative exterior architecture that plays with shape and volume. Balconies and open areas in both levels bring the outside beauty into the living environment, creating a unique experience.',
+            ],
+            attrs: [
+                { name: "Location", value: "Florida" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 1,200 m²" },
+                { name: "GFA", value: "± 3,800 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/holyfield-atlanta/content_1.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'Holyfield has a residential concept that is quite spacious and has a continuous concept between outdoor and indoor spaces with a swimming pool and a large enough backyard as a point of view.'
+                },
+                {
+                    type: 'full-image',
+                    image: '/assets/img/works/holyfield-atlanta/content_1.jpg'
+                },
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/holyfield-atlanta/content_3_1.jpg',
+                    image2: '/assets/img/works/holyfield-atlanta/content_3_2.jpg'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/holyfield-atlanta/content_4.jpg'
+                }
+            ]
+        }

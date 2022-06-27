@@ -8,55 +8,5 @@ block body-menu
     include /components/menu/work/architecture_mixed-use.pug
 
 block body-data 
-    -
-        const articleItems = [
-            {
-                type: 'default',
-                image: '/assets/img/works/abu-dhabi-residential/thumb.jpg',
-                name: 'Abu Dhabi Residential',
-                location: 'Abu Dhabi',
-                href: '/works/architecture/mixed-use/abu-dhabi-residential.html',
-            },
-            {
-                type: 'default',
-                image: '/assets/img/works/palm-beach-florida/thumb.jpg',
-                name: 'Palm Beach, Florida',
-                location: 'Palm Beach, Florida',
-                href: '/works/architecture/mixed-use/palm-beach-florida.html',
-            },
-            {
-                type: 'default',
-                image: '/assets/img/works/trump-plaza/thumb.jpg',
-                name: 'Trump Plaza',
-                location: 'West Palm Beach',
-                href: '/works/architecture/mixed-use/trump-plaza.html',
-            },
-            {
-                type: 'default',
-                image: '/assets/img/works/villa-belmonte/thumb.jpg',
-                name: 'Villa Belmonte',
-                location: 'Belmonte',
-                href: '/works/architecture/mixed-use/villa-belmonte.html',
-            },
-            {
-                type: 'default',
-                image: '/assets/img/works/miami-hotel-condo/thumb.jpg',
-                name: 'Miami Hotel Condo',
-                location: 'Miami',
-                href: '/works/architecture/mixed-use/miami-hotel-condo.html',
-            },
-            {
-                type: 'default',
-                image: '/assets/img/works/aquarius-tower-atlanta/thumb.jpg',
-                name: 'Aquarius Tower Atlanta',
-                location: 'Atlanta',
-                href: '/works/architecture/mixed-use/aquarius-tower-atlanta.html',
-            },
-            {
-                type: 'default',
-                image: '/assets/img/works/dolce/thumb.jpg',
-                name: 'Dolce',
-                location: 'Miami',
-                href: '/works/architecture/mixed-use/dolce.html',
-            }
-        ]
+    include /components/data/article_architecture_mixed-use.pug
+    - const articleItems = [...mixedUse]

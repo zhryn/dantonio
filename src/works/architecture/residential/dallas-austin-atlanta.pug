@@ -1,0 +1,49 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Dallas Austin Atlanta")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Dallas Austin Atlanta',
+            subtitle: 'Atlanta',
+            slug: 'dallas-austin-atlanta',
+            header: '/assets/img/works/dallas-austin-atlanta/header.jpg',
+            description: [
+                'Dallas Austin Atlanta is Beautiful contemporary architecture meets the finest in luxury living in this Atlanta masterpiece. Crafted by innovative modern architects and built to exacting standards, every room brings something new to the living experience.',
+            ],
+            attrs: [
+                { name: "Location", value: "Atlanta" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 2,400 m²" },
+                { name: "GFA", value: "± 6,800 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/dallas-austin-atlanta/content_1_1.jpg',
+                    image2: '/assets/img/works/dallas-austin-atlanta/content_1_2.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'This project has the beautiful shape and Modern design elements also incorporate the use of natural materials into most spaces.Through the use wood, leather, teak, stone, and even linen, the designer can weave in a touch of warmth without distracting from the overall feel of the space'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/dallas-austin-atlanta/content_2.jpg'
+                },
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/dallas-austin-atlanta/content_3_1.jpg',
+                    image2: '/assets/img/works/dallas-austin-atlanta/content_3_2.jpg'
+                }
+            ]
+        }

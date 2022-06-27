@@ -1,0 +1,39 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Atlanta Residence")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Atlanta Residence',
+            subtitle: 'Tuscan',
+            slug: 'atlanta-residence',
+            header: '/assets/img/works/atlanta-residence/header.jpg',
+            description: [
+                'Atlanta Residence With its modern features including the latest home technology, this impressive modern Tuscan design has everything for luxury life. Tuscan architecture homes like this offer the light and airy interiors that are perfect for relaxation, giving a superb living experience.',
+            ],
+            attrs: [
+                { name: "Location", value: "Tuscan" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 1,370 m²" },
+                { name: "GFA", value: "± 2,960 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/atlanta-residence/content_1.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'The location Surround by natural environment make the residence feel so comfort and nice place for living.'
+                }
+            ]
+        }
