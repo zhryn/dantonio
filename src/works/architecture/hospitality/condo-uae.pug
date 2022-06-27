@@ -1,0 +1,60 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Condo - UAE")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Condo - UAE',
+            subtitle: 'Miami',
+            slug: 'condo-uae',
+            header: '/assets/img/works/condo-uae/header.jpg',
+            description: [
+                'Condo - UAE Beach is Hotel Near Beach area in Miami. This hotel has 5th floor and the concept of this hotel is Modern attractive with playing the shape of the building and volume but still looks Modern architecture. It\'s make the building beautiful. This Hotel also has infinity pool who has view live with the beach it\'s make pleasure to stay in this hotel.',
+            ],
+            attrs: [
+                { name: "Location", value: "Miami" },
+                { name: "Type", value: "Hotel" },
+                { name: "Site Area", value: "± 2,200 m²" },
+                { name: "GFA", value: "± 9,640 m²" },
+                { name: "Height", value: "5th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/condo-uae/content_1.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'Modern design is a reflection of modern thinking brought into our external world through our interior spaces. Born from a vantage point of trying to break traditions, it pushes boundaries both culturally and creatively.It is simple, it is minimalistic, it is natural. Here are a few ways to utilize this design concept.'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'One of the other key elements, there is no room for excessive furniture or decors in modern designs.Tied very closely to minimalism, modern design embraces the idea that less is more. Decorations such as vases, pottery, other knick knacks, and even books are sparse, often stored out of sight.Everything is placed with a purpose, and special care is taken not to let space feel cluttered, keeping the light, airy feeling of the room alive.'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/condo-uae/content_2.jpg'
+                },
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/condo-uae/content_3_1.jpg',
+                    image2: '/assets/img/works/condo-uae/content_3_2.jpg'
+                },
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/condo-uae/content_4_1.jpg',
+                    image2: '/assets/img/works/condo-uae/content_4_2.jpg'
+                },
+            ]
+        }
