@@ -1,0 +1,48 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "West Palm Beach")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'West Palm Beach',
+            subtitle: 'West Palm Beach',
+            slug: 'west-palm-beach',
+            header: '/assets/img/works/west-palm-beach/header.jpg',
+            description: [
+                'The beautiful building, West Palm Beach delivers effortless beauty-bringing a chic modern-traditional-inspired feel to West Palm Beach Downtown living',
+            ],
+            attrs: [
+                { name: "Location", value: "West Palm Beach" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 185,700 m²" },
+                { name: "GFA", value: "± 23,690 m²" },
+                { name: "Height", value: "4th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/west-palm-beach/content_1.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'West Palm Beach has two towers story condo buildinglocated across fromThe Square\'s dynamic dining, shopping, and entertainment scene. The building offers 2 Bedroom.'
+                },
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/west-palm-beach/content_2_1.jpg',
+                    image2: '/assets/img/works/west-palm-beach/content_2_2.jpg'
+                },
+                {
+                    type: 'full-image',
+                    image: '/assets/img/works/west-palm-beach/content_3.jpg'
+                }
+            ]
+        }

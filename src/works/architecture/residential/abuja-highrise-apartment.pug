@@ -1,0 +1,49 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Abuja Highrise Apartment")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Abuja Highrise Apartment',
+            subtitle: 'Abuja',
+            slug: 'abuja-highrise-apartment',
+            header: '/assets/img/works/abuja-highrise-apartment/header.jpg',
+            description: [
+                'Abuja Highrise apartment is Thenew district is designed to link to the city centre through an intertwined retail promenade. The new modern living style, integrated with the contemporaryapartment promenade.',
+            ],
+            attrs: [
+                { name: "Location", value: "Abuja" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 24,000 m²" },
+                { name: "GFA", value: "± 159,000 m²" },
+                { name: "Height", value: "15th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/abuja-highrise-apartment/content_1_1.jpg',
+                    image2: '/assets/img/works/abuja-highrise-apartment/content_1_2.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'This project has Luxury design, create unique designs that resemble excellence, class and unique beauty.In terms of the architectural style of the walls, we have discreetly integrated a warm shade of cream that offers an extremely pleasant overall visual look.'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/abuja-highrise-apartment/content_2.jpg'
+                },
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/abuja-highrise-apartment/content_3_1.jpg',
+                    image2: '/assets/img/works/abuja-highrise-apartment/content_3_2.jpg'
+                }
+            ]
+        }

@@ -1,0 +1,44 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Park Land Villa")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Park Land Villa',
+            subtitle: 'Park Land',
+            slug: 'park-land-villa',
+            header: '/assets/img/works/park-land-villa/header.jpg',
+            description: [
+                'Park land villa has a concept comfort residential in downtown who luxury design, clean, modern villa.The slab bends becoming either a roof element or a floor feature. The building creates a terrace round the swimming pool and then over it next to the master bedroom level. The concrete ribbon rests on the land on the lower level creating the guest bedrooms.',
+            ],
+            attrs: [
+                { name: "Location", value: "Park Land" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 1,200 m²" },
+                { name: "GFA", value: "± 8,600 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/park-land-villa/content_1_1.jpg',
+                    image2: '/assets/img/works/park-land-villa/content_1_2.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'The panels that create the enclosed spaces are either curtain walls or wooden movable partitions. The bedrooms have room height glazing, creating a strong relationship between the interior and the exterior.'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/park-land-villa/content_2.jpg'
+                }
+            ]
+        }

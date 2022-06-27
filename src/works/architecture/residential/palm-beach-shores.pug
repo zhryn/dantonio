@@ -1,0 +1,43 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Palm Beach Shores")
+
+block body-menu
+    include /components/menu/work/architecture.pug
+
+block body-data
+    -
+        const article = {
+            title: 'Palm Beach Shores',
+            subtitle: 'Palm Beach',
+            slug: 'palm-beach-shores',
+            header: '/assets/img/works/palm-beach-shores/header.jpg',
+            description: [
+                'Palm beach shores has All floor plans feature a private balcony or patio and for your enjoyment, the property features a state-of-the-art fitness center, multi-purpose clubhouse and refreshing pool.',
+            ],
+            attrs: [
+                { name: "Location", value: "Palm Beach" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 8,500 m²" },
+                { name: "GFA", value: "± 12,600 m²" },
+                { name: "Height", value: "6th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/palm-beach-shores/content_1.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'Dramatic 10-foot ceilings and large windows let in invigorating natural light that brings life to our thoughtfully designed interiors.'
+                },
+                 {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/palm-beach-shores/content_2.jpg'
+                }
+            ]
+        }
