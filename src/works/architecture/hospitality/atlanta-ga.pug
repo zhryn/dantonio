@@ -1,0 +1,33 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Atlanta - GA")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Atlanta - GA',
+            subtitle: 'Miami',
+            slug: 'atlanta-ga',
+            header: '/assets/img/works/atlanta-ga/header.jpg',
+            description: [
+                'Atlanta - GA located in city that has unique lifestyle based living environment woven along the street. Vertical living is an increasing challenge within manyof the rapidly developing cities. Increasing density to accommodate the growth of cities is a manageable and exciting challenge.This hotel has a modern classical fasade with clean colour make this building expensive.',
+            ],
+            attrs: [
+                { name: "Location", value: "Miami" },
+                { name: "Type", value: "Hotel" },
+                { name: "Site Area", value: "± 3,840 m²" },
+                { name: "GFA", value: "± 12,000 m²" },
+                { name: "Height", value: "8th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: []
+        }

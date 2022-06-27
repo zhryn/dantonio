@@ -1,0 +1,33 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Delay Florida")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Delay Florida',
+            subtitle: 'Florida',
+            slug: 'delay-florida',
+            header: '/assets/img/works/delay-florida/header.jpg',
+            description: [
+                'Delay Florida with anexclusive rooftop pooland bar overlooking the Atlantic Ocean and unrivaled hospitality., where your complimentary lounge chair and beach towel awaits. Delay Florida offers al fresco dining atWISH Restaurant and Gardenin a beautiful courtyard setting in the main building, and a memorable "people-watching" experience at the iconic News Café',
+            ],
+            attrs: [
+                { name: "Location", value: "Florida" },
+                { name: "Type", value: "Hotel" },
+                { name: "Site Area", value: "± 2,300 m²" },
+                { name: "GFA", value: "± 7,420 m²" },
+                { name: "Height", value: "8th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: []
+        }
