@@ -12,4 +12,11 @@ block body-menu
 
 block body-data 
     include /components/data/work/architecture/residential.pug
-    - const articleItems = [...residential]
+    -
+        const items = [...residential]
+
+        for (let i = 0; i < items.length; i++) {
+            if (i % 10 == 0 && i != items.length - 1) items[i].type = 'large'
+        }
+
+        const articleItems = [...items]
