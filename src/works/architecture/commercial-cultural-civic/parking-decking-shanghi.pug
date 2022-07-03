@@ -1,0 +1,46 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Parking Decking Shanghi")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Parking Decking Shanghi',
+            subtitle: 'Kano, Nigeria',
+            slug: 'parking-decking-shanghi',
+            header: '/assets/img/works/parking-decking-shanghi/header.jpg',
+            description: [
+                'Building Paking has a concept Precast concrete structure that builds on a unique contemporary architecture style to craft functional effectiveness but retains eye-catching visuals that set new standards for modern architects. Practical and stylish, simple and elegant, a unique charm that stands apart from its surroundings.',
+            ],
+            attrs: [
+                { name: "Location", value: "Kano, Nigeria" },
+                { name: "Type", value: "Parking Building" },
+                { name: "Site Area", value: "± 4,400 m²" },
+                { name: "GFA", value: "± 13,800 m²" },
+                { name: "Height", value: "6th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/parking-decking-shanghi/content_1.jpg'
+                },
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/parking-decking-shanghi/content_2.jpg'
+                },
+                {
+                    type: 'paragraph-center',
+                    text: 'The Outside/Structured Parking space type refers to an above-grade, ramp access, open-air structure specifically designed to accommodate vehicle parking and Accessible parking spacesmust be provided easily.Also, Visual ImpactThe parking structure should landscaping elements to reduce the emissions air.'
+                }
+            ]
+        }

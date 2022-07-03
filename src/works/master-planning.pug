@@ -1,0 +1,22 @@
+extends /layouts/layout_works.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Work > Master Planning")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(1, 0)
+
+block body-data 
+    include /components/data/work/master-planning/index.pug
+    -
+        const items = [...masterPlanning]
+
+        for (let i = 0; i < items.length; i++) {
+            if (i % 10 == 0 && i != items.length - 1) items[i].type = 'large'
+        }
+
+        const articleItems = [...items]

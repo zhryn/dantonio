@@ -1,0 +1,38 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Mount of Fire and Miracle Park")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(1, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Mount of Fire and Miracle Park',
+            subtitle: 'America',
+            slug: 'mountain-of-fire-and-miracle-park',
+            header: '/assets/img/works/mountain-of-fire-and-miracle-park/header.jpg',
+            description: [
+                'Mountain of Fire and Miracles Parkis a master planning industrial park monument with building monument and parking function. It will generate new job opportunities for the area and create a lively neighbourhood that supports the city\'s culture of technology and monumental, as well as its large network of parks.',
+            ],
+            attrs: [
+                { name: "Location", value: "America" },
+                { name: "Type", value: "Master Planning" },
+                { name: "Site Area", value: "± 75,000 m²" },
+                { name: "GFA", value: "± 149,500 m²" },
+                { name: "Height", value: "6th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/mountain-of-fire-and-miracle-park/content_1.jpg'
+                }
+            ]
+        }

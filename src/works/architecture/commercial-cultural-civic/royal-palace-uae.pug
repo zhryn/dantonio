@@ -1,0 +1,33 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Royal Palace - UAE")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Royal Palace - UAE',
+            subtitle: 'Abu Dhabi',
+            slug: 'royal-palace-uae',
+            header: '/assets/img/works/royal-palace-uae/header.jpg',
+            description: [
+                'The goal of this project was to create a truly luxurious living experience within a property that blended with the locality. From the colonial style house plans the project developed into a stunning residence that incorporates the very latest home technology behind a traditional colonial façade.',
+            ],
+            attrs: [
+                { name: "Location", value: "Abu Dhabi" },
+                { name: "Type", value: "Palace" },
+                { name: "Site Area", value: "± 20,080 m²" },
+                { name: "GFA", value: "± 56,000 m²" },
+                { name: "Height", value: "3rd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: []
+        }

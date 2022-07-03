@@ -1,0 +1,33 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Orchid Bay")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(1, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Orchid Bay',
+            subtitle: 'Orchid Bay',
+            slug: 'orchid-bay',
+            header: '/assets/img/works/orchid-bay/header.jpg',
+            description: [
+                'As the design lead for the first phase of this masterplan, we have realised a scheme which embraces the site’s landscape and celebrates its origins. The brief was to produce a suite of premium products which together create a sense of destination unique',
+            ],
+            attrs: [
+                { name: "Location", value: "Orchid Bay" },
+                { name: "Type", value: "Master Planning" },
+                { name: "Site Area", value: "± 283,000 m²" },
+                { name: "GFA", value: "± 359,500 m²" },
+                { name: "Height", value: "8th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: []
+        }

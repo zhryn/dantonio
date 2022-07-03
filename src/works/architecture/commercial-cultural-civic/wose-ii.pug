@@ -1,0 +1,38 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Wose II")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Wose II',
+            subtitle: 'Florida',
+            slug: 'wose-ii',
+            header: '/assets/img/works/wose-ii/header.jpg',
+            description: [
+                'Wose II Office Building Utilizing the latest technology and a thoroughly contemporary architecture style, this building creates a luxury environment built to encourage productivity and innovative thinking. A work of astonishing results from modern architects looking beyond the possible.',
+            ],
+            attrs: [
+                { name: "Location", value: "Florida" },
+                { name: "Type", value: "Office" },
+                { name: "Site Area", value: "± 1,080 m²" },
+                { name: "GFA", value: "± 2,030 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/wose-ii/content_1.jpg'
+                }
+            ]
+        }

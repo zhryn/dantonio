@@ -1,0 +1,22 @@
+extends /layouts/layout_works.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Work > Interior Design")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(2, 0)
+
+block body-data 
+    include /components/data/work/interior-design/index.pug
+    -
+        const items = [...interiorDesign]
+
+        for (let i = 0; i < items.length; i++) {
+            if (i % 10 == 0 && i != items.length - 1) items[i].type = 'large'
+        }
+
+        const articleItems = [...items]

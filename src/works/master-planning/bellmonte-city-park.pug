@@ -1,0 +1,38 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Bellmonte City Park")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(1, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Bellmonte City Park',
+            subtitle: 'Bellmonte',
+            slug: 'bellmonte-city-park',
+            header: '/assets/img/works/bellmonte-city-park/header.jpg',
+            description: [
+                'Bellmonte city park is masterplan design for the city that places all amenities within convenient reach of transport links. By developing a flow of people and traffic, we refine the city experience for all.',
+            ],
+            attrs: [
+                { name: "Location", value: "Bellmonte" },
+                { name: "Type", value: "Master Planning" },
+                { name: "Site Area", value: "± 75,000 m²" },
+                { name: "GFA", value: "± 149,500 m²" },
+                { name: "Height", value: "6th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/bellmonte-city-park/content_1.jpg'
+                }
+            ]
+        }

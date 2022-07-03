@@ -1,0 +1,33 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Cobb Count - Diagnosis Centre")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Cobb Count - Diagnosis Centre',
+            subtitle: 'Florida',
+            slug: 'cobb-count',
+            header: '/assets/img/works/cobb-count/header.jpg',
+            description: [
+                'Cobb Count - Diagnostic Centre Impressive without being imposing, bringing contemporary architecture into the heart of daily life, this diagnostic center is deigned to instill confidence in users, providing a welcoming environment that encourages community togetherness.',
+            ],
+            attrs: [
+                { name: "Location", value: "Florida" },
+                { name: "Type", value: "Healthcare Center" },
+                { name: "Site Area", value: "± 1,590 m²" },
+                { name: "GFA", value: "± 4,030 m²" },
+                { name: "Height", value: "6th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: []
+        }

@@ -1,0 +1,33 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "1st Victoria Bank")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(0, -1)
+
+block body-data
+    -
+        const article = {
+            title: '1st Victoria Bank',
+            subtitle: 'Florida',
+            slug: '1st-victoria-bank',
+            header: '/assets/img/works/1st-victoria-bank/header.jpg',
+            description: [
+                '1st Victoria Bank Building Using a contemporary architecture style to show forward thinking innovation, the building is designed to create an ambience of solidity, building customer confidence while providing an elegant and effective workspace within.Ground level plazas and pedestrian streets activate both edges of the central retail pavilion and are lined with retail and restaurants.',
+            ],
+            attrs: [
+                { name: "Location", value: "Florida" },
+                { name: "Type", value: "Office Building" },
+                { name: "Site Area", value: "± 2,700 m²" },
+                { name: "GFA", value: "± 12,000 m²" },
+                { name: "Height", value: "14th Floor" },
+                { name: "Service", value: "Architecture & Interior Design on 2018" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: []
+        }

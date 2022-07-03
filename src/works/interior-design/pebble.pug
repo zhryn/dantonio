@@ -1,0 +1,39 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Pebble")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(2, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Pebble',
+            subtitle: 'Pebble',
+            slug: 'pebble',
+            header: '/assets/img/works/pebble/header.jpg',
+            description: [
+                'Pebble An interior design concept is the central theme that all the design elements are focused upon. It exists as an idea first and is brought to reality through careful planning. At its best, an interior design concept is a visual theme that evokes a specific mood by strategically using color, space, and style. It is the art of turning an idea into reality.',
+            ],
+            attrs: [
+                { name: "Location", value: "Pebble" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 1,200 m²" },
+                { name: "GFA", value: "± 2,200 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Interior Design" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/pebble/content_1_1.jpg',
+                    image2: '/assets/img/works/pebble/content_1_2.jpg'
+                }
+            ]
+        }

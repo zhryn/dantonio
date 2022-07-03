@@ -1,0 +1,39 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Lake City Nigeria")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(1, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Lake City Nigeria',
+            subtitle: 'Nigeria',
+            slug: 'lake-city-nigeria',
+            header: '/assets/img/works/lake-city-nigeria/header.jpg',
+            description: [
+                'Lake city Nigeria is one of our masterplanning projects. The city havemany function in one area as amusement park, Olympic pool, museum, spa resort, hotel, retail centre, medical centre, zoo, residential etc. Connectivity is at the core of the scheme.The scheme will be a positive connection to Raleigh\'s extensive greenways system and local historic neighbourhoods.',
+            ],
+            attrs: [
+                { name: "Location", value: "Nigeria" },
+                { name: "Type", value: "Master Planning" },
+                { name: "Site Area", value: "± 158,080 m²" },
+                { name: "GFA", value: "± 230,000 m²" },
+                { name: "Height", value: "15th Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'two-images',
+                    image1: '/assets/img/works/lake-city-nigeria/content_1_1.jpg',
+                    image2: '/assets/img/works/lake-city-nigeria/content_1_2.jpg'
+                }
+            ]
+        }
