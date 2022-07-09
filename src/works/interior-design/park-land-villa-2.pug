@@ -1,0 +1,38 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Park Land Villa")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(2, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Park Land Villa',
+            subtitle: 'Park Land',
+            slug: 'park-land-villa-2',
+            header: '/assets/img/works/park-land-villa-2/header.jpg',
+            description: [
+                'Park land villa has a concept comfort residential in downtown who luxury design, clean, modern villa.When it comes to interior design, the term “open concept” refers to a home with a minimal amount of barriers in the main living spaces.',
+            ],
+            attrs: [
+                { name: "Location", value: "Park Land" },
+                { name: "Type", value: "Residential" },
+                { name: "Site Area", value: "± 1,200 m²" },
+                { name: "GFA", value: "± 8,600 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture" },
+                { name: "Status", value: "On Proposal" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/park-land-villa-2/content_1.jpg'
+                }
+            ]
+        }

@@ -14,9 +14,4 @@ block body-data
     include /components/data/work/master-planning/index.pug
     -
         const items = [...masterPlanning]
-
-        for (let i = 0; i < items.length; i++) {
-            if (i % 10 == 0 && i != items.length - 1) items[i].type = 'large'
-        }
-
         const articleItems = [...items]

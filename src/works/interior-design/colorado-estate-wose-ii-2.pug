@@ -1,0 +1,38 @@
+extends /layouts/layout_work.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Colorado Estate Wose II")
+
+block body-menu
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(0)
+        const submenu = makeSubCommonMenu(2, -1)
+
+block body-data
+    -
+        const article = {
+            title: 'Colorado Estate Wose II',
+            subtitle: 'Colorado',
+            slug: 'colorado-estate-wose-ii-2',
+            header: '/assets/img/works/colorado-estate-wose-ii-2/header.jpg',
+            description: [
+                'The concept of the Colorado Street Wose II goes the extra mile in selecting all products that will be used in the building process. After all the interior spaces are created, then make selections to fill those spaces and beautify them with furnishings, art pieces, window coverings and draperies, and any other elements needed to complete the ambience.',
+            ],
+            attrs: [
+                { name: "Location", value: "Colorado" },
+                { name: "Type", value: "House - Residential" },
+                { name: "Site Area", value: "± 3,200 m²" },
+                { name: "GFA", value: "± 9,480 m²" },
+                { name: "Height", value: "2nd Floor" },
+                { name: "Service", value: "Architecture & Interior Design" },
+                { name: "Status", value: "On Construction" },
+            ],
+            sections: [
+                {
+                    type: 'single-center-image',
+                    image: '/assets/img/works/colorado-estate-wose-ii-2/content_1.jpg'
+                }
+            ]
+        }
