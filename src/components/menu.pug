@@ -1,8 +1,8 @@
 -
     const commonMenu = [
         { text: 'WORK', href: '/works/architecture/selected-work.html', active: false },
-        { text: 'PROFILE', href: '#', active: false },
-        { text: 'CONTACT', href: '#', active: false }
+        { text: 'PROFILE', href: '/profile.html', active: false },
+        { text: 'CONTACT', href: '/contact.html', active: false }
     ]
 
     const commonSubMenu = [
@@ -34,8 +34,11 @@
 
     function makeCommonMenu(selectedIndex) {
         let menu = commonMenu
-        menu[selectedIndex].active = true
-        menu[selectedIndex].href = '#'
+
+        if (selectedIndex >= 0) {
+            menu[selectedIndex].active = true
+            menu[selectedIndex].href = '#'
+        }
 
         return menu
     }

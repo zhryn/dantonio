@@ -11,20 +11,10 @@ block head-script
     script(src=js.elasticfader, type='text/javascript')
 
 block body 
-    -
-        const menu = [
-            { text: 'WORK', href: '/works/architecture/selected-work.html', active: false },
-            { text: 'PROFILE', href: '#', active: false },
-            { text: 'CONTACT', href: '#', active: false }
-        ]
+    include /components/menu.pug
+    - const menu = makeCommonMenu(-1)
 
-        const carousel = [
-            { name: 'Arizona House', src: '/assets/img/home/slideshow_01.jpeg' },
-            { name: 'Ocean Condo', src: '/assets/img/home/slideshow_02.png' },
-            { name: 'Del Ray Beach', src: '/assets/img/home/slideshow_03.jpg' },
-            { name: 'Dolce Vita', src: '/assets/img/home/slideshow_04.jpg' },
-            { name: 'Villa at Demonte', src: '/assets/img/home/slideshow_05.jpg' }
-        ]
+    include /components/data/carousel.pug
 
     body
         include /mixins/navbar.pug
@@ -43,7 +33,7 @@ block body
                         li(data-background=item.src)
                             .home-description
                                 h2=item.name 
-                                p
+                                p=item.location
             ul#home-list-nav
             .popup.overlay.hidden
             include /components/preloader.pug
