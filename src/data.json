@@ -16,7 +16,8 @@
 
         "home": "/assets/js/design.home.js",
         "main": "/assets/js/design.main.js",
-        "work": "/assets/js/design.work.js"
+        "work": "/assets/js/design.work.js",
+        "profile": "/assets/js/design.profile.js"
     },
     "css": {
         "style": "/assets/css/style.css",

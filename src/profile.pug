@@ -1,0 +1,59 @@
+extends /layouts/layout_profile.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Profile")
+
+block body-menu 
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(1)
+        const submenu = makeSubProfileMenu(0, -1)
+
+block body-data
+    -
+        const sections = [
+            {
+                type: 'text',
+                title: 'who we are',
+                text: 'Antonio Escandari, a visionary, creative and inspirational architectural designer. Antonio is a dedicated leader and as a founder of D\'Antonio International has achieved a reputation as one of the world\'s leading architectural designers providing aesthetically pleasing buildings that are functional while maintaining the structural integrity.'
+            },
+            {
+                type: 'single-center-image',
+                image: '/assets/img/profile/content_1.jpg'
+            },
+            {
+                type: 'text',
+                title: 'approach',
+                text: 'We develop our projects through an ever-evolving process that continuously challenges the boundaries of the possible.'
+            },
+            {
+                type: 'two-images',
+                image1: '/assets/img/profile/content_2_1.jpg',
+                image2: '/assets/img/profile/content_2_2.jpg',
+            },
+            {
+                type: 'text',
+                title: 'clients',
+                text: 'His client base is global and include private clients, government, universities, and other diverse industries both internationally and the United States.'
+            },
+            {
+                type: 'text',
+                title: 'awards',
+                text: 'He has accomplished an exemplary track record through his architectural design knowledge and his ability to formulate successful cross-disciplinary collaboration with other professional designers, architects, and engineers to develop his design visions. Each project is designed personally and directly by Antonio. Each project provides innovative design solutions offering depth and breadth to the environment.'
+            },
+            {
+                type: 'text',
+                title: 'social & environment responsibility',
+                text: 'An advocate of sustainable design, Antonio is committed to designing quality environments making sustainable design an integral part of his design process. His core value is to design and create safe living environments, enhancing the health and well-being of people and communities. Antonio founded an on-profit organization, The Task Haiti Foundation and also owns and manages Advocate World wide an other non-profit organization. His sustainable design projects have won awards for many communities throughout the world.<br/><br/> Is it your dream to inspire people through international, world-class architecture, landscape and urban design? Whether you are a student or an experienced industry professional, D\'Antonio will stimulate and challenge your skills.'
+            },
+            {
+                type: 'two-images',
+                image1: '/assets/img/profile/content_5_1.jpg',
+                image2: '/assets/img/profile/content_5_2.jpg',
+            },
+        ]
+
+block body-container
+    include /mixins/profile_sections.pug
+    +profile-sections(sections)

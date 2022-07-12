@@ -1,0 +1,36 @@
+mixin profile-sections(sections)
+    .case-study-sections.pt-20
+        each section in sections 
+            .case-study-section.mb-40
+                if section.type == 'text'
+                    +profile-text(section.title, section.text)
+                else if section.type == 'two-images'
+                    +two-images(section.image1, section.image2)
+                else if section.type == 'single-center-image'
+                    +single-center-image(section.image)
+        .pb-40
+
+mixin profile-text(title, text)
+    .case-study-section.mb-40
+        .projecttext-full.has-info.no-img.swap-columns
+            .container-fluid.no-gutters
+                .row.justify-content-center.no-gutters
+                    .col-md-8.col-sm-12
+                        h1.section-title= title
+                        .info-attr.mb-4.mb-md-0.ext-gutter-left!= text
+
+mixin two-images(image1, image2)
+    .imgcolumns-full.full-bleed.c-8
+        .container-fluid.no-gutters
+            .row.justify-content-between.no-gutters
+                .col-sm-8.mb-4.mb-sm-0
+                    img(src=image1)
+                .col-sm-8
+                    img(src=image2)
+
+mixin single-center-image(image)
+    .image-column
+        .container-fluid
+            .row.justify-content-center
+                .col-md-8.col-sm-12
+                    img(src=image)

@@ -12,7 +12,7 @@ mixin navbar-menus(menus=[], submenus=[])
 mixin navbar-submenus(submenus=[])
     ul#nav-sub.sub-10.visible-lg
         each submenu in submenus 
-            li.col-sub.item-1.header-col.fl.item-type-dir(class=submenu.active ? 'active' : '')
+            li.col-sub.header-col.fl.item-type-dir(class=`${submenu.class} ${submenu.active ? 'active' : ''}`)
                 a(href=submenu.href)= submenu.text 
                 -
                     const spliceIntoChunks = (arr, chunkSize) => {
