@@ -1,0 +1,32 @@
+extends /layouts/layout_contact.pug
+
+block title
+    include /mixins/site_title.pug
+    +site-title(title, "Get In Touch")
+
+block body-menu 
+    include /components/menu.pug
+    -
+        const menu = makeCommonMenu(2)
+        const submenu = makeSubContactMenu(0, -1)
+
+block body-data
+    -
+        const sections = [
+            {
+                type: 'single-center-mini-image',
+                image: '/assets/img/logo.png'
+            },
+            {
+                type: 'info',
+                title: 'D\'Antonio International',
+                keyvals: [
+                    { key: 'Headquarters', value: '5805 State Bridge Rd, Ste G442, Duluth, Georgia, 30097, United States' },
+                    { key: 'Phone', value: '+1.404.242.1538' }
+                ]
+            }
+        ]
+
+block body-container
+    include /mixins/common_sections.pug
+    +common-sections(sections)

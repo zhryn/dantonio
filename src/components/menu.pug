@@ -45,6 +45,16 @@
         },
     ]
 
+    const contactSubMenu = [
+        {
+            text: 'GET TO KNOW US',
+            href: '/contact.html',
+            active: false,
+            subs: [],
+            class: 'item-3'
+        },
+    ]
+
     function makeCommonMenu(selectedIndex) {
         let menu = commonMenu
 
@@ -75,6 +85,23 @@
 
     function makeSubProfileMenu(selectedIndex, selectedSubIndex) {
         let submenu = profileSubMenu 
+        submenu[selectedIndex].active = true
+
+        if (submenu[selectedIndex].subs.length > 0 && selectedSubIndex != -1) {
+            submenu[selectedIndex].subs[selectedSubIndex].active = true
+            submenu[selectedIndex].subs[selectedSubIndex].href = '#'
+        }
+
+        submenu.forEach((item, index) => {
+            if (index != selectedIndex)
+                item.subs = []
+        })
+
+        return submenu
+    }
+
+    function makeSubContactMenu(selectedIndex, selectedSubIndex) {
+        let submenu = contactSubMenu 
         submenu[selectedIndex].active = true
 
         if (submenu[selectedIndex].subs.length > 0 && selectedSubIndex != -1) {
